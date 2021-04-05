@@ -1,9 +1,9 @@
 class Stone {
   constructor(x, y, width, height) {
     var options = {
-        'restitution':0.3,
-        'friction':5,
-        'density':1
+        'restitution':0.8,
+        'friction':0.9,
+        'density':12
     }
     this.body = Bodies.rectangle(x, y, width, height, options);
     this.width = width;
@@ -16,11 +16,11 @@ class Stone {
     var angle = this.body.angle;
     push();
     translate(pos.x, pos.y);
-    rotate(50);
+    rotate(angle);
     rectMode(CENTER);
     strokeWeight(4);
-    stroke("green");
-    fill(105);
+    stroke("black");
+    fill("black");
     rect(0, 0, this.width, this.height);
     pop();
   }

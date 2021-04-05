@@ -1,14 +1,14 @@
 class Hammer
 {
-    constructor(x, y, width, height) {
+    constructor(x, y) {
         var options = {
             'restitution':0.5,
             'friction':1.0,
             'density':2
         }
-        this.body = Bodies.rectangle(x, y, width, height, options);
-        this.width = width;
-        this.height = height;
+        this.body = Bodies.rectangle(x, y, 50,50, options);
+        this.width = 150;
+        this.height = 40;
         
         World.add(world, this.body);
       }
@@ -22,8 +22,8 @@ class Hammer
         rotate(angle);
         rectMode(CENTER);
         strokeWeight(3);
-        //stroke("blue");
-        //fill("red");
+        stroke("white");
+        fill("orange");
         rect(0, 0, this.width, this.height);
         pop();
       }
